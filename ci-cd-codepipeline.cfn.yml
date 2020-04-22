@@ -6,7 +6,7 @@ Description: EKSWSV1
 
 Parameters:
 
-  SimpleJWTApi:
+  EksClusterName:
     Type: String
     Description: The name of the EKS cluster created
     Default: SimpleJWTApi
@@ -14,7 +14,7 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
 
-  EKSFlask:
+  GitSourceRepo:
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
     Default: EKSFlask
@@ -38,7 +38,7 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub personal access token
 
-  henryvalbuena:
+  GitHubUser:
     Type: String
     Default: henryvalbuena
     Description: GitHub username or organization
@@ -54,7 +54,7 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a CodeBuild Docker image
 
-  UdacityFlaskDeployCBKubectlRole:
+  KubectlRoleName:
     Type: String
     Default: UdacityFlaskDeployCBKubectlRole
     Description: IAM role used by kubectl to interact with EKS cluster
